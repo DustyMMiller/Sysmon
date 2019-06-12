@@ -6,6 +6,6 @@ IF ($sysmon.ToString() -eq '<manifest schemaversion="4.21" binaryversion="9.10">
     & $sysmonsource -c $sysmonconfig
 } ELSE {
     # Uninstall sysmon and re-install new version
-    & $sysmonsource -u
+    sysmon -u
     & $sysmonsource -i $sysmonconfig -acceptEula
 }
