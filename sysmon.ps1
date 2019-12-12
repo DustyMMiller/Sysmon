@@ -1,10 +1,10 @@
 $sysmon = sysmon -s | select-string schemaversion=
 $sysmonsource = '<set your source location here>'
 $sysmonconfig = '<set your xml location here>'
-$sysmonstring = '<manifest schemaversion="4.22" binaryversion="9.20">'
+$sysmonstring = '<manifest schemaversion="4.23" binaryversion="9.20">'
 
 IF (Test-Path $filePath) {
-    IF ($sysmon.ToString() -eq '<manifest schemaversion="4.22" binaryversion="9.20">') {
+    IF ($sysmon.ToString() -eq $sysmonstring) {
         & $sysmonsource -c $sysmonconfig
     } ELSE {
         # Uninstall sysmon and re-install new version
