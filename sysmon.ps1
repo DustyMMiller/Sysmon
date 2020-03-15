@@ -2,6 +2,7 @@ $sysmon = sysmon -s | select-string schemaversion=
 $sysmonsource = '<set your source location here>'
 $sysmonconfig = '<set your xml location here>'
 $sysmonstring = '<manifest schemaversion="4.23" binaryversion="9.20">'
+$filePath = 'C:\Windows\Sysmon.exe'
 
 IF (Test-Path $filePath) {
     IF ($sysmon.ToString() -eq $sysmonstring) {
