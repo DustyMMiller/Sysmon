@@ -1,4 +1,6 @@
 # Sysmon
-Sysmon startup/shutdown powershell script to install and configure sysmon.
+Sysmon powershell script to install and configure sysmon.
 
-Update the source and xml location for your usage.
+Update the $sysmonsource, $sysmonconfig, and $sysmonstring variables for your usage.
+
+Also has an optional command to increase the maxsize of sysmon logs.
